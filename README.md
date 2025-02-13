@@ -1,13 +1,13 @@
 # javascipt-total
 
-##Curso de HTML, CCS y JavaScript
+## Curso de HTML, CCS y JavaScript
 
-##Nombre del estudiante:
+## Nombre del estudiante:
     Valeria Villalobos Arroyo
 
 ### Sección 10-2.
 
-###Descripcion dl repositorio
+### Descripcion dl repositorio
 
 Este es mi primer curso de programación web 
 
