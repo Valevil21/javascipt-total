@@ -5,7 +5,7 @@
 ##Nombre del estudiante:
     Valeria Villalobos Arroyo
 
-### Sección 10-2
+### Sección 10-2.
 
 ###Descripcion dl repositorio
 
