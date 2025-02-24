@@ -1,0 +1,18 @@
+body{
+    background-color: lightblue;
+}
+#titulo{
+
+    color: darkblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+h2{
+    color: rgb(0, 34, 93);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+p{
+font-family: 'Courier New', Courier, monospace;
+}
+#infancia>#adolescencia>#adultez{
+    color: rgb(24, 179, 239);
+}
