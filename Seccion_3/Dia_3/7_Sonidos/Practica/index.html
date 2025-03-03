@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html >
+    <head>
+    <title>Squirtle</title>
+</head>
+<body>
+    
+    <h1>Este es el pokemon Squirtle</h1>
+    <br>
+    <img src="Squirtle.png" alt="Squirtle">
+    <br>
+    <h2>Este es su Sonido</h2>
+    <br>
+    <button onclick="AudioAlarma">Cries</button>
+    <br><br><br>
+    <audio id="AudioPokemon" controls>
+        <source src="./Audio/cries_pokemon_latest_7.ogg" type="audio/mpeg">
+    </audio>
+    <script>
+        let elementoaudioPokemon =document.getElementById("AudioPokemon")
+        
+        function AudioAlarma(){
+            elementoaudioPokemon.play();
+        }
+    </script>
+</body>
+</html>
