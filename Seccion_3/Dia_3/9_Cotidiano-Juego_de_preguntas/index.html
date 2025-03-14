@@ -2,77 +2,82 @@
 <html>
 
 <head>
-   <title>Juego de preguntas</title>
-   <link rel="stylesheet" href="misEstilos.css">
+    <title>Juego de preguntas</title>
+    <link rel="stylesheet" href="misEstilos.css">
 </head>
 
-<body onload="comenzarTiempo()">
-   <h1 id="titulo">Responde las preguntas lo más rapido que puedas</h1>
-   <h1 id="Alarma">tiempo restante: 30s</h1>
-   <br><br>
-   <p>¿Cuantós huesos tiene el cuerpo humano?</p>
-   <input type="text">
-   <br><br><br>
-   <p>¿Cómo se diferencian las células procariotas de las eucariotas</p>
-   <input type="text ">
-   <br><br><br>
-   <p>¿Cuáles son las capas internas de la tierrra?</p>
-   <input type="text">
-   <br><br><br>
-   <p>¿Cuantós planetas hay en el sistema solar?</p>
-   <input type="text">
-   <br><br><br>
-   <p>¿Que son las galaxias y cuántos tipos hay?</p>
-   <input type="text">
-   <br><br>
-   <audio src="Audios/gameover.mp3" type="audio/mpeg"></audio>
+<body onload="comenzarTemporizador()">
+    <h1>Responde las preguntas lo más rápido que puedas</h1>
+    <h1 id="tiempoElegido">30</h1>
 
-   <script>
-      let tiempo = 30;
-      let elementoSonidoAlarma = document.getElementById("audioAlarma");
-      let elementoTiempo = document.getElementById("tiempoElegido");
-      let intervalo;
+    <h2>1. ¿Cuantos huesos tiene el cuerpo humano?</h2>
+    <input type="text" id="Respuesta1">
+    <br>
+    <br>
+    <h2>2. ¿Como se diferencian las celulas procariotas de las eucariotas?</h2>
+    <input type="text" id="Respuesta2">
+    <br>
+    <br>
+    <h2>3. ¿Cuales son los coleres del arcoiris?</h2>
+    <input type="text" id="Respuesta3">
+    <br>
+    <br>
+    <h2>4. ¿Cuantos planetas hay en el sistema solar?</h2>
+    <input type="text" id="Respuesta4">
+    <br>
+    <br>
+    <h2>5. ¿Que es el sol?</h2>
+    <input type="text" id="Respuesta5">
+    <br>
+    <br>
 
-      function comenzarTemporizador() {
-         intervalo = setInterval(function () {
-            tiempo--;
-            let minutos = Math.floor(tiempo / 60).toString().padStart(2, "0");
-            let segundos = (tiempo % 60).toString().padStart(2, "0");
-            elementoTiempo.textContent = minutos + ":" + segundos;
-            finDelTemporizador();
-         }, 1000);
-      }
+    <audio id="audioAlarma">
+        <source src="Audios/gameover.mp3" type="audio/mpeg">Sonido no habilitado
+    </audio>
 
+    <script>
+        let tiempo = 30;
+        let elementoSonidoAlarma = document.getElementById("audioAlarma");
+        let elementoTiempo = document.getElementById("tiempoElegido");
+        let intervalo;
 
+        function comenzarTemporizador() {
+            intervalo = setInterval(function () {
+                tiempo--;
+                let minutos = Math.floor(tiempo / 60).toString().padStart(2, "0");
+                let segundos = (tiempo % 60).toString().padStart(2, "0");
+                elementoTiempo.textContent = minutos + ":" + segundos;
 
-      function finDelTemporizador() { }
-      if (tiempo <= 0) {
-         clearInterval(intervalo);
-         elementoSonidoAlarma.play();
-         alert("GAME OVER: Se acabó el tiempo, Intenta nuevamente");
-      }
+                finDelTemporizador();
+            }, 1000);
+        }
 
+        function finDelTemporizador() {
+            if (tiempo <= 0) {
+                clearInterval(intervalo);
+                elementoSonidoAlarma.play();
+                alert("GAME OVER: Se acabó el tiempo, Intenta nuevamente");
+            }
+        }
 
+        function detenerTemporizador() {
+            clearInterval(intervalo);
+            let fechaActual = new Date();
+            let lasRespuestas = [
+                document.getElementById("Respuesta1").value,
+                document.getElementById("Respuesta2").value,
+                document.getElementById("Respuesta3").value,
+                document.getElementById("Respuesta4").value,
+                document.getElementById("Respuesta5").value,
+            ];
 
-      function detenerTemporizador() {
-         clearInterval(intervalo);
-         let fechaActual = new Date();
-         let lasRespuestas = [
-            document.getElementById("Respuesta1").value;
-         document.getElementById("Respuesta2").value;
-         document.getElementById("Respuesta3").value;
-         document.getElementById("Respuesta4").value;
-         document.getElementById("Respuesta5").value;
-         ];
-         alert("La fecha de hoy es" + fechaActual.toLocaleDateString('es-ES') + " y tus respuestas son:\n" + lasRespuestas.join("\n"));
-      }
-
-
-   </script>
-   <button onclick="determinarTemporizador()" id="buttonTermine">Termine!</button>
-   <br>
-   <button onclick="location.reload()" id="buttonVolver">Volver a intentarlo</button>
-   </script>
+            alert("La fecha de hoy es " + fechaActual.toLocaleDateString('es-ES') + " y tus respuestas son:\n" + lasRespuestas.join("\n"));
+        }
+    </script>
+    <button onclick="detenerTemporizador()" id="buttonTermine">Termine!</button>
+    <br>
+    <br>
+    <button onclick="location.reload()" id="buttonVolver">Volver a intentar</button>
 
 </body>
 

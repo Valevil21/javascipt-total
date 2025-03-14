@@ -4,12 +4,17 @@
         <title>Return 2</title>
     </head>
     <body>
-        <p>La fecha de hoy es:</p>
-        <button onclick="mostrarFecha">Click aqui</button>
-        
+        <p>La fecha de hoy es: </p>
+        <p>
+            <button onclick="mostrarFecha()">Click aqui</button>
+        </p>
         <script>
             function mostrarFecha(){
-                alert(obtenerFecha.toLocaleDateString('es-ES'))
+                alert(obtenerFecha());
+            }
+            function obtenerFecha(){
+                let fechaActual = new Date();
+                return fechaActual.toLocaleDateString('es-ES')
             }
         </script>
     </body>
