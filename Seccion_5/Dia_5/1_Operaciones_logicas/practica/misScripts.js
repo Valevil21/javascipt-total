@@ -4,7 +4,8 @@ function comparar() {
     let resultado = Number(numero1) > Number(numero2);
 
     document.getElementById("resultado").textContent = resultado;
-
+    
+    
 
 }
 
