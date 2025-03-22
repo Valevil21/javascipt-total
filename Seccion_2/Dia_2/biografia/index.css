@@ -1,18 +1,57 @@
-body{
-    background-color: lightblue;
+/* Estilos generales */
+body {
+    background-color: #f8f0e3; /* Color de fondo claro */
+    font-family: 'Times New Roman', Times, serif; /* Fuente clásica */
+    color: #4a2c2a; /* Color de texto marrón oscuro */
+    line-height: 1.6; /* Espaciado entre líneas */
+    margin: 20px; /* Margen en el cuerpo */
 }
-#titulo{
 
-    color: darkblue;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+/* Encabezados */
+h1 {
+    color: #7f5d3a; /* Color marrón claro para el título */
+    text-align: center; /* Centrar el título */
+    font-size: 2.5em; /* Tamaño mayor para el título */
 }
-h2{
-    color: rgb(0, 34, 93);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+h2 {
+    color: #b86d3b; /* Color dorado para el subtítulo */
+    font-size: 2em; /* Tamaño de subtítulo */
+    margin-top: 20px; /* Margen en la parte superior */
 }
-p{
-font-family: 'Courier New', Courier, monospace;
+
+/* Párrafos */
+p {
+    margin-bottom: 15px; /* Espacio entre párrafos */
 }
-#infancia>#adolescencia>#adultez{
-    color: rgb(24, 179, 239);
+
+/* Imágenes */
+img {
+    border: 5px solid #c89f6b; /* Borde de la imagen en color ocre */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Listas */
+ul {
+    list-style: none; /* Remover viñetas */
+    padding-left: 0; /* Remover sangría */
+}
+
+li {
+    background-color: #e6b873; /* Color fondo para elementos de lista */
+    color: #4a2c2a; /* Color del texto de la lista */
+    margin: 5px 0; /* Margen vertical entre elementos */
+    padding: 10px; /* Espacio interior */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Enlaces */
+a {
+    color: #6f3a1b; /* Color rojo oscuro para enlaces */
+    text-decoration: none; /* Sin subrayado */
+}
+
+a:hover {
+    text-decoration: underline; /* Subrayar al pasar el ratón */
+    color: #855e3d; /* Cambiar color al pasar el ratón */
 }
