@@ -1,25 +1,39 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Cotidiano Calculadora</title>
-        <link rel="stylesheet" href="misEstilos.css">
-        <script src="misEstilos.css"></script>
-    </head>
-    <body>
-       <h1>Calculadora</h1>
-       <input type="number">
-       <input type="number">
-       <button onclick="Sumar()">+</button>
-       <button onclick="Restar()">-</button>
-       <button onclick="Multiplicar()">x</button>
-       <button onclick="Dividir()">/</button>
-       <button onclick="Raiz()">Raiz</button>
-       <button onclick="Potencia()">Potencia</button>
-       <button onclick="Absoluto()">Absoluto</button>
-       <button onclick="Random()">Random</button>
-      <input type="number">
-      <button onclick="Correcto()">Aceptar</button>       
-      <button onclick="Incorrecto()">Cancelar</button>       
-      <button onclick="Reiniciar()">Reiniciar</button>       
-    </body>
-</html>
+<html lang="es">
+<head>
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="misEstilos.css">
+    <script src="misScript.js"></script>
+    
+</head>
+<body>
+
+<div class="container">
+    <h2>Calculadora</h2>
+    <input type="number" id="num1">
+    <input type="number" id="num2">
+    
+    <div>
+        <button onclick="calcular('+')">+</button>
+        <button onclick="calcular('-')">-</button>
+        <button onclick="calcular('*')">x</button>
+        <button onclick="calcular('/')">/</button>
+    </div>
+    <div>
+        <button onclick="raiz()">raiz</button>
+        <button onclick="potencia()">potencia</button>
+    </div>
+    <div>
+        <button onclick="absoluto()">absoluto</button>
+        <button onclick="numeroAleatorio()">random</button>
+    </div>
+    
+    <h3>Resultado:</h3>
+    <input type="text" id="resultado" >
+    
+    <div>
+        <button onclick="redondearCercano('round')">round</button>
+        <button onclick="redondearArriba('floor')">floor</button>
+        <button onclick="redondearAbajo('ceil')">ceil</button>
+    </div>
+</div>
