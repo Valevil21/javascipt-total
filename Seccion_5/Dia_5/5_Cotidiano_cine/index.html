@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Bienvenidos al cine</title>
+        <link rel="stylesheet" href="misEstilos.css">
+        <script src="misScripts.js"></script>
+    </head>
+    <body>
+        <h1>Recomendador de peliculas</h1>
+        <h2>--- Menú ---</h2>
+        <p>Queremos hacer de tu visita una experiencia más placentera. Para eso, ingresa tu edad y selecciona el género que más te guste, y te recomendaremos tu película ideal.</p>
+
+        <p>Edad:</p>
+        <input type="number" id="edad" min="1">
+
+        <div class="buttons">
+            <button onclick="recomendarPelicula('drama')">Drama</button>
+            <button onclick="recomendarPelicula('comedia')">Comedia</button>
+            <button onclick="recomendarPelicula('musical')">Musical</button>
+            <button onclick="recomendarPelicula('crimen')">Crimen</button>
+        </div>
+
+        <h2>Nuestra recomendación:</h2>
+    <p id="recomendacion"></p>
+
+    <h2>Clasificación de películas por edad</h2>
+    <div class="clasificacion">
+        <h3>Género: Drama</h3>
+        <p>Menores de 13 años → Casablanca</p>
+        <p>Entre 13 y 15 años → The Shawshank Redemption</p>
+        <p>Mayores e igual de 16 años → Taxi Driver</p>
+
+        <h3>Género: Comedia</h3>
+        <p>Menores de 13 años → Back to the Future</p>
+        <p>Entre 13 y 15 años → The Truman Show</p>
+        <p>Mayores e igual de 16 años → The Wolf of Wall Street</p>
+
+        <h3>Género: Musical</h3>
+        <p>Menores de 13 años → La La Land</p>
+        <p>Entre 13 y 15 años → Les Misérables</p>
+        <p>Mayores e igual de 16 años → The Rocky Horror Picture Show</p>
+
+        <h3>Género: Crimen</h3>
+        <p>Menores de 13 años → No hay opciones para esta edad</p>
+        <p>Entre 13 y 15 años → El Secreto de sus Ojos</p>
+        <p>Mayores e igual de 16 años → The Godfather</p>
+    </div>
+
+    </body>
+</html>

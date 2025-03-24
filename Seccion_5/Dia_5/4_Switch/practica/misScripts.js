@@ -4,15 +4,16 @@ function consultarPrecio(){
     let fruta = elementoFruta.value;
     let Precio = elementoPrecio.value;
 
-    switch (Precio) {
+    switch (fruta) {
         case "1":
-        alert("el precio de la fruta:"+ elementoFruta.textContent + " es:" + "$15")
+            elementoFruta.textContent = "$15"
         break;
         case "2":
-            alert("el precio de la fruta:"+ elementoFruta.textContent + " es:"+ "$20")
+            elementoFruta.textContent= "$20"
             break;
         case "3":
-            alert("el precio de la fruta:"+ elementoFruta.textContent + " es:"+ "$25")
+            elementoFruta.textContent = "$25"
             break;
 }
+alert("el precio de la fruta es: " + elementoFruta.textContent)
 }
