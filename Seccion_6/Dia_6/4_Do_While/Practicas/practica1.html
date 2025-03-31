@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Do while 1</title>
+    </head>
+    <body>
+        <script>
+           function testLoop(numVueltas) {
+    let contador = 0; // Inicializamos el contador de vueltas
+    do {
+        contador++;
+        console.log("Vuelta número: " + contador); // Mostramos la vuelta actual
+    } while (contador < numVueltas); // Condición para finalizar el bucle
+}
+
+// Solicitamos al usuario que ingrese el número de vueltas
+const vueltasUsuario = parseInt(prompt("¿Cuántas vueltas quieres que dé el ciclo?"));
+testLoop(vueltasUsuario);
+        </script>
+    </body>
+</html>

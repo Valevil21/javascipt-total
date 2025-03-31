@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Do while 2</title>
+    </head>
+    <body>
+        <script>
+          function mostrarTablaMultiplicar() {
+    // Solicitamos al usuario un número mediante prompt
+    const numero = parseInt(prompt("Ingresa un número para mostrar su tabla de multiplicar:"));
+    let i = 1; // Inicializamos el contador para la tabla
+    
+    // Usamos do...while para generar la tabla de multiplicar
+    do {
+        console.log(`${numero} x ${i} = ${numero * i}`); // Mostramos la multiplicación actual
+        i++; // Incrementamos el contador
+    } while (i <= 10); // Repetimos hasta alcanzar el 10
+}
+
+// Llamamos a la función para mostrar la tabla
+mostrarTablaMultiplicar();
+        </script>
+    </body>
+</html>
