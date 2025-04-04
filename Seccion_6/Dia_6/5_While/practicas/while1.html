@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>While 1</title>
+</head>
+
+<body>
+    <script>
+        let numeroDeVueltas = parseInt(prompt("¿Cuantas vueltas quieres dar?"));
+
+        function vueltas(numVueltas) {
+            let contador = 1;
+            while (contador <= numVueltas) {
+                console.log("Vuelta número: " + contador);
+                contador++;
+            }
+        }
+        vueltas(numeroDeVueltas);
+    </script>
+</body>
+
+</html>
