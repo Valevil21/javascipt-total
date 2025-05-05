@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Parametros de Constructor</title>
+</head>
+
+<body>
+    <script>
+        function Automovil(marca, modelo, anio) {
+            this.marca = marca;
+            this.modelo = modelo;
+            this.anio = anio;
+             this. descripcion = function(){
+            console.log(`La marca es ${this.marca}, el modelo es  ${this.modelo}, el modelo es ${this.anio}`);
+         }
+
+        };
+
+        let Auto1 = new Automovil("Chevrolet", "Camaro SS", 2024);
+        let Auto2 = new Automovil("Dodge", "Challenger SRT Demon", 2018);
+        let Auto3 = new Automovil("BMW", "X6", 8);
+
+
+    </script>
+</body>
+
+</html>

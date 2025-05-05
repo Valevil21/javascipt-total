@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Parametros de Constructor 2</title>
+</head>
+
+<body>
+    <script>
+        function Automovil(marca, color, talle) {
+            this.marca = marca;
+            this.color = color;
+            this.talle = talle;
+            this. descripcion = function(){
+            console.log(`La marca es ${this.marca}, el color es  ${this.color}, el talle es ${this.talle}`);
+         }
+        };
+        let Polo1 = new Automovil("Ralph Lauren", "Rojo Oscuro", "L");
+        let Polo2 = new Automovil("Tommy Hilfiger", "Verde Esmeralda", "M");
+        let Polo3 = new Automovil("Polo Club", "Azul Marino", "L");
+
+    </script>
+</body>
+
+</html>
