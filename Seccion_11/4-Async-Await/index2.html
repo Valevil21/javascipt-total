@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async - Await</title>
+</head>
+<body>
+    <h2>Conversion de dolares a colones (funciona)</h2>
+    <script>
+    async function convertirDolares() {
+        let montoDolares = 100;
+        console.log("Obteniendo tasa de conversión...");
+    
+    try {
+        let respuesta = await fetch('https://open.er-api.com/v6/latest/USD');
+        let datos = await respuesta.json();
+        let tasaCRC = datos.rates.CRC;
+
+        let colones = montoDolares * tasaCRC;
+        console.log ('${montoDolares} dólares son aproximadamente ${colones.toFixed(2)}colones');
+    }catch (error){
+        console.error ("Error al obtener la tasa:", error)
+    }}
+
+    convertirDolares();
+    </script>
+</body>
+</html>

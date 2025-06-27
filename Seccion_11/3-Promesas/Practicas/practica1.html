@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promesas 1</title>
+</head>
+
+<body>
+    <script>
+        let promesa;
+        function test(resultado) {
+            promesa = new Promise(function (resolve, reject) {
+                if (resultado) {
+                    resolve("Correcto");
+                } else {
+                    reject("Error");
+                }
+            })}
+
+        promesa
+            .then(res => {
+                console.log(res);
+                alert(res);
+            })
+
+            .catch (error => {
+                console.error(error);
+                alert(error);
+            })
+
+        function ejecutar() {
+            test(true)
+        }
+
+    </script>
+</body>
+
+</html>
