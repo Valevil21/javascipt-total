@@ -1,0 +1,6 @@
+Nota: Python debe estar instalado
+
+Abre una terminal en la carpeta donde tienes los archivos y ejecuta: python -m http.server
+
+
+Esto levantará un servidor web local en el puerto 8000. Luego, abre tu navegador y accede a http://localhost:8000/biblioteca.xml.
